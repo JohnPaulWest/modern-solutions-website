@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modern Solutions — Your Final Tenant. Forever.</title>
+<meta name="description" content="Modern Solutions is a short-term rental company that becomes your long-standing corporate tenant. STR Certified. Trusted since 2016. Stable, on-time rent for property owners. Vetted stays for traveling professionals." />
+<meta name="theme-color" content="#F5F1EA" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Modern Solutions — Your Final Tenant. Forever." />
+<meta property="og:description" content="We become your long-standing corporate tenant. Stable rent. Vetted guests. Properties treated like fine wine." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    /* Scandinavian minimalist palette — warm, soft, calm */
+    --ivory: #FBF8F3;          /* main background — softer than pure white */
+    --cream: #F5F1EA;          /* secondary bg, section breaks */
+    --linen: #ECE6DB;           /* tertiary warm neutral */
+    --sand:  #E1D9C8;           /* subtle dividers, cards */
+    --sage:  #9CAF9B;           /* muted sage — primary accent */
+    --sage-deep: #6E8270;       /* darker sage for text emphasis */
+    --sage-soft: #C7D2C0;       /* very soft sage for backgrounds */
+    --wood:  #B8A58A;           /* warm wood tone */
+    --ink:   #2F2A24;           /* warm charcoal — softer than black */
+    --ink-soft: #5A544B;
+    --muted: #8B847A;
+    --line: rgba(47,42,36,0.08);
+    --line-warm: #E4DDD0;
+
+    --serif: "Fraunces", "Cormorant Garamond", Georgia, serif;
+    --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+
+    --shadow-sm: 0 2px 8px rgba(47,42,36,0.04);
+    --shadow-md: 0 8px 24px rgba(47,42,36,0.06);
+    --shadow-lg: 0 20px 48px rgba(47,42,36,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--ivory);
+    line-height: 1.65;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+  }
+  h1 { font-size: clamp(2.4rem, 5.5vw, 4.5rem); line-height: 1.05; font-weight: 400; }
+  h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); line-height: 1.15; margin-bottom: 0.7em; font-weight: 400; }
+  h3 { font-size: 1.35rem; line-height: 1.35; margin-bottom: 0.5em; font-weight: 500; }
+  p  { color: var(--ink-soft); margin-bottom: 1em; font-weight: 400; }
+
+  em { font-style: italic; color: var(--sage-deep); font-weight: 400; }
+
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 1.75rem; }
+  .eyebrow {
+    font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--sage-deep); font-weight: 500;
+    display: inline-block; margin-bottom: 1.25rem;
+  }
+
+  /* ================== NAV ================== */
+  nav {
+    position: fixed; top: 1rem; left: 1rem; right: 1rem; z-index: 100;
+    background: rgba(251, 248, 243, 0.85);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid var(--line-warm);
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.7rem 1.5rem; max-width: 1180px; margin: 0 auto;
+  }
+  .brand {
+    font-family: var(--serif); color: var(--ink); font-size: 1.2rem;
+    font-weight: 500; letter-spacing: -0.01em; text-decoration: none;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .brand-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--sage); display: inline-block;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .nav-links a {
+    color: var(--ink-soft); text-decoration: none; font-size: 0.9rem;
+    font-weight: 400; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--sage-deep); }
+  .nav-cta {
+    background: var(--ink); color: var(--ivory) !important;
+    padding: 0.55rem 1.2rem; border-radius: 999px; font-weight: 500;
+    font-size: 0.85rem !important;
+  }
+  .nav-cta:hover { background: var(--sage-deep); color: var(--ivory) !important; }
+
+  .menu-toggle {
+    display: none; background: transparent; border: none;
+    color: var(--ink); font-size: 1.4rem; cursor: pointer;
+  }
+
+  /* ================== HERO ================== */
+  .hero {
+    position: relative; min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 9rem 1.75rem 5rem;
+    background: var(--ivory);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ""; position: absolute; top: -10%; right: -10%;
+    width: 55%; height: 120%;
+    background: var(--sage-soft);
+    border-radius: 50% 0 0 50%;
+    opacity: 0.5;
+    z-index: 0;
+  }
+  .hero-inner {
+    max-width: 1180px; margin: 0 auto; width: 100%;
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center;
+  }
+  .hero h1 { margin-bottom: 1.5rem; }
+  .hero-sub {
+    font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+    color: var(--ink-soft); margin-bottom: 2.25rem;
+    line-height: 1.6; max-width: 540px;
+  }
+  .hero-ctas { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-block; padding: 0.95rem 1.75rem; text-decoration: none;
+    font-size: 0.9rem; font-weight: 500;
+    border-radius: 999px;
+    transition: all 0.25s ease; cursor: pointer; border: 1px solid transparent;
+    font-family: var(--sans);
+  }
+  .btn-primary {
+    background: var(--ink); color: var(--ivory);
+  }
+  .btn-primary:hover { background: var(--sage-deep); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .btn-outline {
+    background: transparent; color: var(--ink); border-color: var(--ink);
+  }
+  .btn-outline:hover { background: var(--ink); color: var(--ivory); }
+
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background-size: cover; background-position: center;
+    background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80');
+  }
+  .hero-visual::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(47,42,36,0.15) 100%);
+  }
+  .hero-card {
+    position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem;
+    background: rgba(251, 248, 243, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 1.25rem 1.5rem; border-radius: var(--radius-md);
+    display: flex; align-items: center; gap: 1rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .hero-card-icon {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--sage); color: var(--ivory);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 1.2rem;
+  }
+  .hero-card-text { font-size: 0.88rem; color: var(--ink); line-height: 1.4; }
+  .hero-card-text strong { display: block; font-weight: 500; }
+  .hero-card-text span { color: var(--muted); font-size: 0.8rem; }
+
+  .hero-badges {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; margin-top: 3rem; padding-top: 2.5rem;
+    border-top: 1px solid var(--line-warm);
+    grid-column: 1 / -1;
+  }
+  .hero-badge { }
+  .hero-badge strong {
+    font-family: var(--serif); font-size: 1.6rem; font-weight: 500;
+    color: var(--ink); display: block; margin-bottom: 0.1rem;
+  }
+  .hero-badge-label {
+    font-size: 0.78rem; color: var(--muted);
+  }
+
+  /* ================== SECTIONS ================== */
+  section { padding: 6rem 0; position: relative; }
+  .section-cream { background: var(--cream); }
+  .section-linen { background: var(--linen); }
+  .section-sage { background: var(--sage-soft); }
+
+  .section-head { max-width: 680px; margin: 0 auto 3.5rem; text-align: center; }
+
+  /* ================== STATS BAND ================== */
+  .stats-band { background: var(--ivory); padding: 3rem 1.75rem; }
+  .stats-inner {
+    max-width: 1180px; margin: 0 auto;
+    background: var(--cream);
+    border-radius: var(--radius-xl);
+    padding: 3rem 2rem;
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 2rem;
+    text-align: center;
+  }
+  .stat-value {
+    font-family: var(--serif); font-size: 2.8rem; font-weight: 400;
+    color: var(--ink); line-height: 1; margin-bottom: 0.4rem;
+  }
+  .stat-label {
+    font-size: 0.8rem; color: var(--muted);
+  }
+
+  /* ================== ABOUT ================== */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: center;
+  }
+  .about-img {
+    aspect-ratio: 4/5;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background-size: cover; background-position: center;
+    background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80');
+    box-shadow: var(--shadow-md);
+  }
+  .signature {
+    margin-top: 2rem; font-family: var(--serif); font-style: italic;
+    color: var(--sage-deep); font-size: 1.1rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--line-warm);
+  }
+
+  /* ================== SERVICES ================== */
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+  .service-card {
+    background: var(--ivory); padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line-warm);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--sage);
+  }
+  .service-icon {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--sage-soft); color: var(--sage-deep);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 1.3rem; font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .service-card h3 {
+    font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+    font-family: var(--sans); font-weight: 600; color: var(--sage-deep);
+    margin-bottom: 0.5rem;
+  }
+  .service-card h4 {
+    font-family: var(--serif); font-size: 1.5rem; color: var(--ink);
+    margin-bottom: 1rem; font-weight: 400;
+  }
+
+  /* ================== OWNERS ================== */
+  .owners-grid {
+    display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 4.5rem; align-items: center;
+  }
+  .owners-img {
+    aspect-ratio: 4/5;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background-size: cover; background-position: center;
+    background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80');
+    box-shadow: var(--shadow-md);
+  }
+  .pull-quote {
+    font-family: var(--serif); font-style: italic;
+    color: var(--sage-deep); font-size: 1.3rem; line-height: 1.5;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    border-left: 2px solid var(--sage);
+    margin: 1.5rem 0;
+  }
+
+  .benefit-list { list-style: none; margin-top: 2rem; }
+  .benefit-list li {
+    padding: 1.2rem 0 1.2rem 3rem; position: relative;
+    border-bottom: 1px solid var(--line-warm);
+    color: var(--ink-soft);
+  }
+  .benefit-list li:last-child { border-bottom: none; }
+  .benefit-list li::before {
+    content: "✓"; position: absolute; left: 0; top: 1.15rem;
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--sage-soft); color: var(--sage-deep);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; font-weight: 600;
+  }
+  .benefit-list li strong {
+    display: block; color: var(--ink); margin-bottom: 0.2rem;
+    font-family: var(--serif); font-size: 1.15rem; font-weight: 500;
+  }
+
+  /* ================== PLATFORMS ================== */
+  .platforms { text-align: center; padding: 5rem 0; background: var(--linen); }
+  .platforms-inner { max-width: 900px; margin: 0 auto; padding: 0 1.75rem; }
+  .platforms-list {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+    margin-top: 2.5rem;
+  }
+  .platform-chip {
+    background: var(--ivory);
+    padding: 1.4rem 1rem;
+    border-radius: var(--radius-md);
+    font-family: var(--serif); font-size: 1.2rem; color: var(--ink);
+    font-weight: 500; letter-spacing: -0.01em;
+    border: 1px solid var(--line-warm);
+    transition: all 0.2s ease;
+  }
+  .platform-chip:hover {
+    border-color: var(--sage);
+    transform: translateY(-2px);
+  }
+
+  /* ================== TESTIMONIALS ================== */
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+  .testimonial {
+    background: var(--ivory); padding: 2.25rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line-warm);
+  }
+  .testimonial-quote {
+    color: var(--sage); font-family: var(--serif); font-size: 2.5rem;
+    line-height: 0.5; margin-bottom: 0.5rem;
+  }
+  .testimonial p {
+    font-family: var(--serif); font-size: 1.1rem;
+    color: var(--ink); line-height: 1.55; margin: 0.75rem 0 1.5rem;
+    font-weight: 400;
+  }
+  .testimonial-author {
+    font-size: 0.8rem; color: var(--muted);
+    padding-top: 1rem; border-top: 1px solid var(--line-warm);
+  }
+
+  /* ================== FAQ ================== */
+  .faq-list { max-width: 780px; margin: 0 auto; }
+  details.faq-item {
+    background: var(--ivory);
+    border-radius: var(--radius-md);
+    margin-bottom: 0.75rem;
+    padding: 0 1.5rem;
+    border: 1px solid var(--line-warm);
+    transition: border 0.2s;
+  }
+  details.faq-item[open] { border-color: var(--sage); }
+  details.faq-item summary {
+    padding: 1.35rem 0;
+    font-family: var(--serif); font-size: 1.2rem; color: var(--ink);
+    font-weight: 500; list-style: none; position: relative; padding-right: 2.5rem;
+    outline: none; cursor: pointer;
+  }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary::after {
+    content: "+"; position: absolute; right: 0; top: 50%;
+    transform: translateY(-50%); color: var(--sage-deep); font-size: 1.5rem;
+    font-weight: 300; transition: transform 0.2s;
+  }
+  details.faq-item[open] summary::after { content: "−"; }
+  details.faq-item p {
+    padding-bottom: 1.35rem; color: var(--ink-soft);
+  }
+
+  /* ================== CONTACT ================== */
+  .contact-section { background: var(--cream); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
+  }
+  .contact-detail {
+    display: flex; gap: 1rem; margin-top: 1.75rem; padding-top: 1.75rem;
+    border-top: 1px solid var(--line-warm); align-items: flex-start;
+  }
+  .contact-detail-icon {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--sage-soft); color: var(--sage-deep);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 1rem;
+  }
+  .contact-detail-label {
+    font-size: 0.75rem; color: var(--muted);
+    margin-bottom: 0.15rem;
+  }
+  .contact-detail-value {
+    font-family: var(--serif); font-size: 1.2rem; color: var(--ink);
+    font-weight: 500;
+  }
+  .contact-detail-value a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--sage); }
+  .contact-detail-value a:hover { color: var(--sage-deep); }
+
+  .contact-form {
+    background: var(--ivory); padding: 2.75rem;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--line-warm);
+    box-shadow: var(--shadow-sm);
+  }
+  .contact-form h3 { margin-bottom: 1.5rem; font-size: 1.5rem; color: var(--ink); font-weight: 400; }
+  .form-group { margin-bottom: 1.1rem; }
+  .form-group label {
+    display: block; font-size: 0.78rem;
+    color: var(--ink-soft); margin-bottom: 0.4rem; font-weight: 500;
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 0.85rem 1rem;
+    background: var(--cream);
+    border: 1px solid transparent;
+    color: var(--ink);
+    font-family: var(--sans); font-size: 0.95rem;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--sage); background: var(--ivory);
+    box-shadow: 0 0 0 3px rgba(156,175,155,0.15);
+  }
+  .form-group textarea { resize: vertical; min-height: 120px; font-family: var(--sans); }
+  .contact-form button {
+    width: 100%; padding: 1rem 2rem;
+    background: var(--ink); color: var(--ivory);
+    border: none; font-size: 0.9rem; font-weight: 500;
+    border-radius: 999px;
+    cursor: pointer; transition: all 0.25s;
+    font-family: var(--sans);
+  }
+  .contact-form button:hover { background: var(--sage-deep); transform: translateY(-1px); }
+  .form-note { font-size: 0.78rem; color: var(--muted); margin-top: 0.9rem; text-align: center; }
+  .form-status { margin-top: 1rem; font-size: 0.9rem; text-align: center; }
+  .form-status.success { color: var(--sage-deep); }
+  .form-status.error { color: #c25b5b; }
+
+  /* ================== FOOTER ================== */
+  footer {
+    background: var(--ivory); color: var(--ink-soft);
+    padding: 4rem 1.75rem 2.5rem; text-align: center;
+    border-top: 1px solid var(--line-warm);
+  }
+  footer .brand {
+    font-size: 1.6rem; justify-content: center;
+    margin-bottom: 1rem; color: var(--ink);
+  }
+  .footer-tag {
+    font-family: var(--serif); font-style: italic; font-size: 1.1rem;
+    color: var(--sage-deep); margin-bottom: 2rem;
+  }
+  .footer-meta {
+    font-size: 0.8rem; color: var(--muted);
+    margin-top: 2rem; padding-top: 2rem;
+    border-top: 1px solid var(--line-warm);
+  }
+  footer a { color: var(--sage-deep); text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+
+  /* ================== RESPONSIVE ================== */
+  @media (max-width: 900px) {
+    h1 { font-size: 2.3rem; }
+    h2 { font-size: 1.7rem; }
+    .hero-inner, .about-grid, .owners-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
+    .hero-badges { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .platforms-list { grid-template-columns: repeat(2, 1fr); }
+    .nav-links {
+      display: none; position: absolute; top: calc(100% + 8px); left: 0; right: 0;
+      background: var(--ivory); flex-direction: column; gap: 0;
+      padding: 0.75rem 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line-warm);
+      box-shadow: var(--shadow-md);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; text-align: center; padding: 0.65rem 0; }
+    .menu-toggle { display: block; }
+    .hero { padding: 7rem 1.25rem 3rem; }
+    .hero::before { width: 90%; height: 50%; top: -20%; right: -30%; }
+    section { padding: 4rem 0; }
+    .contact-form { padding: 2rem; }
+    .stats-inner { padding: 2.5rem 1.5rem; }
+  }
+
+  /* Fade-in */
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="brand"><span class="brand-dot"></span>Modern Solutions</a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#owners">Owners</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">STR Certified · Trusted Since 2016</span>
+      <h1>Your final tenant. <em>Forever.</em></h1>
+      <p class="hero-sub">
+        We are Modern Solutions — a short-term rental company that becomes your long-standing corporate tenant.
+        Stable, on-time rent. Properties treated like fine wine. Vetted stays for traveling professionals.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Partner with us</a>
+        <a href="#about" class="btn btn-outline">Our story</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-icon">★</div>
+        <div class="hero-card-text">
+          <strong>4.95 average rating</strong>
+          <span>across 1,000+ verified stays</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-badges">
+      <div class="hero-badge"><strong>10+ yrs</strong><div class="hero-badge-label">In business</div></div>
+      <div class="hero-badge"><strong>$6M+</strong><div class="hero-badge-label">Under management</div></div>
+      <div class="hero-badge"><strong>1,000+</strong><div class="hero-badge-label">Happy guests</div></div>
+      <div class="hero-badge"><strong>STR Certified</strong><div class="hero-badge-label">Industry credential</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stats-inner">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-value">7</div>
+        <div class="stat-label">States served</div>
+      </div>
+      <div>
+        <div class="stat-value">20+</div>
+        <div class="stat-label">Landlord partners</div>
+      </div>
+      <div>
+        <div class="stat-value">1,000+</div>
+        <div class="stat-label">Guests hosted</div>
+      </div>
+      <div>
+        <div class="stat-value">$6M+</div>
+        <div class="stat-label">Assets managed</div>
+      </div>
+      <div>
+        <div class="stat-value">2016</div>
+        <div class="stat-label">Trusted since</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img"></div>
+      <div>
+        <span class="eyebrow">Who we are</span>
+        <h2>Properties are works of art. We treat them <em>like fine wine.</em></h2>
+        <p>
+          At Modern Solutions, we believe homes — like fine wine — age best when cared for with
+          intention. Every property under our management is treated as if it were our own.
+          We never skip details. We don't cut corners. And our clients return, year after year.
+        </p>
+        <p>
+          Quality is non-negotiable. Our success is built on long-term relationships with property
+          owners who want stability, respect for their asset, and a single professional point of
+          contact — not a carousel of unpredictable tenants.
+        </p>
+        <p>
+          We commit to professionalism, honesty, and going the extra mile. We own our own
+          properties, too — so we know exactly what's at stake.
+          <strong style="color: var(--ink);">No one will take care of your house like we will.</strong>
+        </p>
+        <div class="signature">— The Modern Solutions team</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section-linen">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What we do</span>
+      <h2>Three ways to work together</h2>
+      <p>Whether you're preparing a new property, handing over the keys, or scaling your existing portfolio — we meet you where you are.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">01</div>
+        <h3>We Partner</h3>
+        <h4>Launch-ready preparation</h4>
+        <p>We'll prepare your property for a successful launch — furnishings, staging, listing optimization, and operational setup, handled end-to-end.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">02</div>
+        <h3>We Rent</h3>
+        <h4>Your final tenant. Ever.</h4>
+        <p>We become your long-standing corporate tenant. Guaranteed, on-time rent. No applications to sift through. No uncertainty. No surprises.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">03</div>
+        <h3>We Serve</h3>
+        <h4>Co-host your listing</h4>
+        <p>Already running your own short-term rental? We'll co-host on your listings with a passed-down cost of 10–15%, depending on the scope.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNERS -->
+<section id="owners">
+  <div class="container">
+    <div class="owners-grid">
+      <div class="owners-img"></div>
+      <div>
+        <span class="eyebrow">For property owners</span>
+        <h2>Why landlords are switching to us</h2>
+        <p>
+          Traditional renting means sifting through applications, hoping the next tenant pays on time,
+          and absorbing wear and tear you can't predict. Our model flips that. You get the upside of
+          traditional renting with the flexibility of a hospitality business — because that's what we run.
+        </p>
+        <div class="pull-quote">
+          Unlike individuals earning a paycheck, or Section 8 applicants, we provide the stable
+          assurance of on-time rent — and we only maintain or upgrade the value of the homes we inhabit.
+        </div>
+
+        <ul class="benefit-list">
+          <li>
+            <strong>Guaranteed, on-time rent</strong>
+            No chasing payments. No missed months. Rent lands when it's supposed to.
+          </li>
+          <li>
+            <strong>Less wear and tear than long-term rentals</strong>
+            Short stays mean less daily use. Cleanings happen between every guest.
+          </li>
+          <li>
+            <strong>Always showing-ready</strong>
+            Your property stays aesthetically pleasing and market-ready at all times.
+          </li>
+          <li>
+            <strong>One professional point of contact</strong>
+            One tenant for the long term — us. Not a revolving door of unpredictable renters.
+          </li>
+          <li>
+            <strong>Flexibility &amp; less time commitment</strong>
+            We handle the day-to-day. You collect rent and enjoy the upside.
+          </li>
+          <li>
+            <strong>We upgrade, never degrade</strong>
+            We only maintain or improve the value of the homes we inhabit. Ever.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS -->
+<section class="platforms">
+  <div class="platforms-inner">
+    <span class="eyebrow">Listed &amp; insured on</span>
+    <h2 style="font-size: 1.8rem;">Protected by the platforms professionals trust</h2>
+    <p style="max-width: 620px; margin: 1rem auto 0;">
+      We operate through the industry's leading short-term rental platforms for their insurance,
+      guest protection, and screening benefits — so your property is covered every night.
+    </p>
+    <div class="platforms-list">
+      <div class="platform-chip">Airbnb</div>
+      <div class="platform-chip">VRBO</div>
+      <div class="platform-chip">Booking.com</div>
+      <div class="platform-chip">FurnishedFinder</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-cream">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What partners say</span>
+      <h2>Trusted by owners, loved by guests</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="testimonial-quote">"</div>
+        <p>Rent shows up on the first, every single month. My property came back better than I left it. I'll never go back to traditional renting.</p>
+        <div class="testimonial-author">Property owner · New Jersey</div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-quote">"</div>
+        <p>As a travel nurse on a 13-week contract, I need a home — not a hotel. Modern Solutions delivered exactly that. Spotless, professional, easy.</p>
+        <div class="testimonial-author">Traveling nurse · Contract guest</div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-quote">"</div>
+        <p>They treat my home like their own. After ten years working with them, I've added two more properties to their portfolio.</p>
+        <div class="testimonial-author">Multi-property owner · Maryland</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section-linen">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Common questions</span>
+      <h2>Frequently asked</h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>How does Modern Solutions differ from a regular tenant?</summary>
+        <p>We aren't an individual renter — we're a corporate tenant with a decade-long track record. We pay rent on time, every time, and our business model depends on keeping your property in excellent condition. Unlike individuals earning from a job, or Section 8 recipients, we bring corporate stability to residential leasing.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Who actually stays in my property?</summary>
+        <p>Vetted traveling professionals — travel nurses, IT specialists, third-party government contractors, engineers, and corporate relocations. Every guest goes through a strict vetting process on platforms like Airbnb, VRBO, Booking.com, and FurnishedFinder before they stay.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What happens if something gets damaged?</summary>
+        <p>We operate through platforms that provide industry-leading insurance protection (Airbnb AirCover, VRBO Guest Protection, and host platforms' damage policies). Beyond that, we take on full operational responsibility for the property and have a decade of experience resolving issues quickly and professionally.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What markets do you serve?</summary>
+        <p>We currently operate across seven U.S. states with a concentration in the Northeast and Mid-Atlantic corridor. Reach out with your property's location and we'll tell you right away whether we can add it to our portfolio.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do I have to furnish the property?</summary>
+        <p>Not necessarily. Under our "We Partner" service, we'll prepare your property from the ground up — furnishing, staging, and getting it listing-ready. Under "We Rent," we can work with your existing setup if it meets short-term rental standards.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How is rent paid, and when?</summary>
+        <p>Rent is paid on a fixed schedule (typically monthly, on the first) via direct deposit. You get the predictability of a long-term lease with none of the volatility of individual tenants.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What does STR Certified mean?</summary>
+        <p>STR Certified is a professional credential in the short-term rental industry, signaling operators who meet strict standards for guest experience, property care, and business practices. We've held this certification as part of our commitment to professionalism.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I get started?</summary>
+        <p>Send us a note through the form below with your property's address and a few details. We'll evaluate the fit and get back to you within two business days. If we're a match, we can typically have a new property revenue-ready within 2–4 weeks.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Get in touch</span>
+        <h2>Let's make your property <em>effortless.</em></h2>
+        <p>Whether you own one home or a portfolio, we'd love to hear about it. Tell us a bit about your property and we'll follow up within two business days.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉</div>
+          <div>
+            <div class="contact-detail-label">Email us</div>
+            <div class="contact-detail-value"><a href="mailto:modernsolutionsx@gmail.com">modernsolutionsx@gmail.com</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">◷</div>
+          <div>
+            <div class="contact-detail-label">Response time</div>
+            <div class="contact-detail-value">Within 2 business days</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✓</div>
+          <div>
+            <div class="contact-detail-label">Credentials</div>
+            <div class="contact-detail-value">STR Certified · Trusted since 2016</div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <h3>Send us a note</h3>
+
+        <input type="hidden" name="access_key" value="5ac82a2d-daab-4b68-8698-5c421ea33bcd" />
+        <input type="hidden" name="subject" value="New inquiry from Modern Solutions website" />
+        <input type="hidden" name="from_name" value="Modern Solutions Website" />
+        <input type="hidden" name="redirect" value="false" />
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+
+        <div class="form-group">
+          <label for="inquiry">I'm interested in</label>
+          <select id="inquiry" name="inquiry" required>
+            <option value="">Select one...</option>
+            <option value="Property Owner — lease to you">Property owner — I want you as my tenant</option>
+            <option value="Property Owner — co-host">Property owner — co-host my existing listing</option>
+            <option value="Traveling Professional — book a stay">Traveling professional — book a stay</option>
+            <option value="General Inquiry">General inquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell us more</label>
+          <textarea id="message" name="message" placeholder="Property address, timeline, or anything else we should know..." required></textarea>
+        </div>
+
+        <button type="submit">Send message</button>
+        <p class="form-note">By submitting, you agree to be contacted by Modern Solutions about your inquiry.</p>
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="brand"><span class="brand-dot"></span>Modern Solutions</div>
+  <div class="footer-tag">Renting has never been simpler.</div>
+  <div>
+    <a href="mailto:modernsolutionsx@gmail.com">modernsolutionsx@gmail.com</a>
+  </div>
+  <div class="footer-meta">
+    © <span id="year"></span> Modern Solutions · STR Certified · Trusted since 2016
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('section, .stats-band').forEach(el => {
+    el.classList.add('fade-in'); io.observe(el);
+  });
+
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const key = form.querySelector('[name="access_key"]').value;
+    if (!key) {
+      status.className = 'form-status error';
+      status.textContent = 'Contact form is not yet activated. (Admin: add your Web3Forms access key.) In the meantime, email modernsolutionsx@gmail.com directly.';
+      return;
+    }
+    status.className = 'form-status';
+    status.textContent = 'Sending...';
+    try {
+      const data = new FormData(form);
+      const res = await fetch(form.action, { method: 'POST', body: data });
+      const json = await res.json();
+      if (json.success) {
+        status.className = 'form-status success';
+        status.textContent = 'Thank you — your message is on its way. We\u2019ll be in touch within two business days.';
+        form.reset();
+      } else {
+        status.className = 'form-status error';
+        status.textContent = json.message || 'Something went wrong. Please email modernsolutionsx@gmail.com directly.';
+      }
+    } catch (err) {
+      status.className = 'form-status error';
+      status.textContent = 'Network error. Please email modernsolutionsx@gmail.com directly.';
+    }
+  });
+</script>
+</body>
+</html>
